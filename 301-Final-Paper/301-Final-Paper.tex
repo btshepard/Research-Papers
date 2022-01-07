@@ -54,21 +54,6 @@
 \section{Introduction}
 In this paper, we will refer to $G$ as an arbitrary finite abelian group, and $\kappa$ as its exponent. We will also let $m$ be a positive integer. We begin with some definitions.
 
-% \begin{defin}
-% Let $A=\{a_1,\ldots,a_m\}$ and let $h$ be a positive integer. The restricted $h$-fold signed sumset of $A$ is defined as
-%     \[h\sfold A = \left\{\sum_{i=1}^m\lambda_i a_i \;\bigg|\; \lambda_i\in\{-1,0,1\},\,\sum_{i=1}^m|\lambda_i|=h\right\};\]
-%     that is, the set containing signed sums of exactly $h$ distinct elements of $A$.
-% \end{defin}
-
-% With this, we can now define a dissociated subset of a group, as follows:
-
-% \begin{defin}
-% Let $h$ be a positive integer. A subset $A$ of a group $G$ for which
-%     \[0\notin \bigcup_{h=1}^{\infty}h\sfold A\]
-%     is called a \textit{dissociated subset} of $G$. If $A$ is a finite set of size $m\in\N$, we denote the above union by
-% \[\bigcup_{h=1}^m h\sfold A=[1, m]\sfold A.\]
-% \end{defin}
-
 \begin{defin}
 Let $G$ be a group. A subset $A=\{a_1,\ldots,a_m\}\subseteq G$ is dissociated if every possible equality of the form
 \[\sum_{i=1}^m \lambda_i a_i = 0,\]
@@ -88,8 +73,6 @@ Let $G$ be a group of order $n$, and $m\leq n$ be a positive integer. Define
     \[\dim(G,m)\vcentcolon=\min \{\dim A\mid A \subseteq G,\, |A|=m\};\]
     that is, the minimum dissociativity dimension of any subset of $G$ of size $m$.
 \end{defin}
-
-% We note in passing that this is a more general version of the function $\tau\sfold(G,\N)$ defined by Bajnok in \cite{bb}; in particular, $\dim G=\dim(G, n)=\tau\sfold(G,\N)$.
 
 \section{Previous results}
 We currently have the following:
@@ -170,19 +153,6 @@ for all $i\neq j$. If $m$ is even, take $A$ without $-a_k$.
 
 Note that these bounds are not generally sharp. For large $m$, Proposition \ref{logn} is better, but note that it is in terms of $n$, which loosens the bound.
 
-% \begin{lem}
-% If $G$ has invariant factorization $\Z_{n_1}\times\cdots\times\Z_{n_r}$,
-% then the group
-% \[H=\Z_{n_{r-k+1}}\times\cdots\times\Z_{n_k}\]
-% is the largest subgroup of $G$ with rank $k$.
-% \end{lem}
-% \begin{proof}
-%     We use induction on $k$ for a fixed $r$. The base case of $k=1$ holds since $H=G$. Now, suppose that the claim holds for some $l\in \N$, that is,
-%     \[H\cong\Z_{n_{r-l+1}}\times\cdots\times\Z_{n_l}\]
-%     is the largest subgroup of $G$ with rank $l$. Consider
-%     \[\Z_{n_{r-l}}\times H.\]
-%     This has rank $l+1$, and is created by 
-% \end{proof}
 \newpage
 In the next theorem, we introduce a lower bound for all $G$ and $m$. First, we have a useful fact that assists with this theorem.
 
@@ -228,22 +198,7 @@ It should be noted that for $k>3$, equality does not generally hold. For example
 for all $r$ and $k\geq4$, which is larger than the lower bound of $r$ given here. We do not currently know much about other values of $m$.
 
 It turns out that the bound in Corollary \ref{Zkr} is sharp for certain elementary abelian $p$-groups; in particular, $p=2$ and $p=3$. We obtain both
-% The following theorems focus on elementary abelian $p$-groups $\Z_p^r$, for which we can form a lower bound and obtain some exact values.
-% \begin{thm}\label{Zp}
-% Let $p$ be a prime. For all $p$, and all positive integers $r$ and $m\leq p^r$, $$\dim(\Z_p^r,m)\geq\lceil\log_p m\rceil.$$
-% \end{thm}
-% \begin{proof}
-%     Let $A\subseteq\Z_p^r$ with $|A|=m$. Since $p$ is prime, the subgroups of $\Z_p^r$ are of the form $\Z_p^{a}$ for positive integers $a\leq p$. Thus, $\langle A \rangle\cong\Z_p^k$ for some $k\leq p$. Then $|\langle A \rangle|=p^k$, and since $|A|\leq|\langle A\rangle|$, we have
-%     \begin{align*}
-%         |A|&\leq p^k\\
-%         m&\leq p^k\\
-%         \log_p m&\leq k\\
-%         \lceil \log_p m \rceil&\leq k
-%     \end{align*}
-% where the last inequality holds since $k$ is an integer. This gives us a lower bound on the rank of $\langle A \rangle$, so by Proposition \ref{F.188}, we have $\dim A\geq \lceil \log_p m \rceil$. Since $A$ is arbitrary, $\dim(\Z_p^r,m)\geq \lceil \log_p m \rceil$, as claimed.
-% \end{proof}
 
-% It should be noted that for $p>3$, equality does not generally hold. We do not currently know much about these cases. However, it turns out that this bound is sharp for $p=2$ and $p=3$. We obtain both
 
 \newcommand{\B}{\mathcal{B}}
 \begin{thm}\label{Z2r}
@@ -283,17 +238,6 @@ This proof does not work for $p\geq5$; even though $\Z_p^r$ is a vector space fo
 \newpage
 Using Proposition \ref{nr}, we can easily get equality for a few related groups when $m$ is of maximum size.
 
-% \begin{prop}
-% For all positive integers $k$, we have
-% \[\dim(\Z_2\times\Z_{2k},4k)=\lfloor\log_2 4k\rfloor.\]
-% \end{prop}
-% \begin{proof}
-%     From Proposition \ref{nr}, we have
-%     \[1+\lfloor \log_2 2k \rfloor\leq\dim(\Z_2\times\Z_{2k},4k)\leq \lfloor \log_2 4k \rfloor.\]
-%     Since clearly
-%     \[1+\log_2 2k=\log_2 4k,\]
-%     the bounds are equal and the claim follows.
-% \end{proof}
 
 
 \begin{prop}
@@ -317,20 +261,6 @@ We now move on to cyclic groups $\Z_n$. In \cite{bb}, B. Bajnok conjectured that
 
 Using the code provided by Francis in \cite{peter}, we have the following table of values that disagree with this conjecture:
 
-% \begin{table}[H]\label{table}
-% \centering
-% \begin{tabular}{c|c|c}
-% $G$  & $m$     & $\dim(G, m)$ \\ \hline
-% $\Z_{17}$ & $14,15$ & 4               \\ \hline
-% $\Z_{19}$ & $14,15$ & 4               \\ \hline
-% $\Z_{22}$ & 15      & 4               \\ \hline
-% $\Z_{23}$ & $14,15$ & 4               \\ \hline
-% $\Z_{26}$ & 15      & 4               \\ \hline
-% $\Z_{28}$ & 15      & 4               \\ \hline
-% $\Z_{29}$ & $14,15$ & 4              
-% \end{tabular}
-% \caption{Table of values larger than the conjecture.}
-% \end{table}
 \vspace{1em}
 \begin{table}[h!]
 \centering
